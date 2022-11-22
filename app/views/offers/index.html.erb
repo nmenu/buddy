@@ -1,0 +1,9 @@
+<h1>All offers</h1>
+
+<ul>
+  <% @offers.each do |offer| %>
+    <li><%= link_to offer.name, offer_path(offer) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New offer", new_offer_path  %>
