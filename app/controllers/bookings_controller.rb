@@ -8,9 +8,11 @@ class BookingsController < ApplicationController
       flash[:alert] = @booking.errors.full_messages.join("\n")
       render :new, status: :unprocessable_entity # message d'erreur
     end
-    private
+  end
 
-    def booking_params
-      params.require(:booking).permit(:title, :description, :location, :hourly_rate)
-    end
+  private
+
+  def booking_params
+    params.require(:booking).permit(:title, :description, :location, :hourly_rate)
+  end
 end
