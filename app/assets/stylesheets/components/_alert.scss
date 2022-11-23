@@ -1,6 +1,9 @@
 .alert {
-  position: fixed;
-  bottom: 16px;
+  bottom: -8px;
   right: 16px;
-  z-index: 1000;
+  z-index: 500;
+}
+
+.alert .m1{
+  margin: 5.25rem!important;
 }
