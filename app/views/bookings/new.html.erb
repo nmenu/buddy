@@ -1,1 +1,5 @@
-<h2>New booking</h2>
+<%= simple_form_for(@booking) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.button :submit, class: "btn btn-outline-primary px-4" %>
+<% end %>
