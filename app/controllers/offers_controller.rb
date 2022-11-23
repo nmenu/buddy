@@ -23,19 +23,6 @@ class OffersController < ApplicationController
     end
   end
 
-  # def edit
-  # end
-
-  # def update
-  #   @offer.update(offer_params)
-  #   redirect_to offer_path(@offer)
-  # end
-
-  # def destroy
-  #   @offer.destroy
-  #   redirect_to offers_path, status: :see_other
-  # end
-
   private
 
   def set_offer
