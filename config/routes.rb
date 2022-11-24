@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :offers, only: [:index, :new, :create, :show]
   resources :bookings
 
+  resources :offers, only: :destroy
+
 end

@@ -23,6 +23,11 @@ class OffersController < ApplicationController
     end
   end
 
+  def destroy
+    @offer.destroy
+    redirect_to offers_path, status: :see_other
+  end
+
   private
 
   def set_offer
