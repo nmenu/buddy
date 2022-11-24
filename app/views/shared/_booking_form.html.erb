@@ -1,0 +1,6 @@
+<%= simple_form_for [offer, booking] do |f| %>
+  <%= f.datetime_field :start_date %>
+  <%= f.datetime_field :end_date %>
+  <%= f.hint "Once you have book your buddy, wait for his/her confirmation." %>
+  <%= f.button :submit, class: "btn btn-outline-primary px-4" %>
+<% end %>
