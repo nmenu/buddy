@@ -1,6 +1,6 @@
-<div class="container mt-5">
+<div class="container my-5">
     <div class="row d-flex justify-content-center">
-        <div class="col-md-7">
+        <div class="col-md-8">
             <div class="card p-3 py-4">
                 <div class="text-center">
                     <img src="https://media.tenor.com/KuxgIrYVdDcAAAAC/gandalf-laughing.gif" width="300" class="rounded-circle">
@@ -12,14 +12,16 @@
                         <p class="fonts"><%= @offer.description %></p>
                     </div>
 
-                    <div class="buttons">
-                      <button class="btn btn-outline-primary px-4">Book</button>
-                        <div>
-                         <span> <%= @offer.hourly_rate%> chf/h</span>
-                        </div>
+                    <div class="card p-3">
+                         <span>Tarif <%= @offer.hourly_rate%> CHF/h</span>
                     </div>
                 </div>
             </div>
+        </div>
+<div class="col-md-4">
+  <div class="card p-3 py-4">
+    <%= render "shared/booking_form", offer: @offer, booking: @booking %>
+  </div>
         </div>
     </div>
 </div>
