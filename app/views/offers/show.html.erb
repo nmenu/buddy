@@ -11,12 +11,12 @@
                     <div class="px-4 mt-1">
                         <p class="fonts"><%= @offer.description %></p>
                     </div>
-
                     <div class="buttons">
                       <button class="btn btn-outline-primary px-4">Book</button>
                         <div>
                          <span> <%= @offer.hourly_rate%> chf/h</span>
                         </div>
+                        <%= link_to "Delete Offer", offer_path(@offer), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" }, class: "btn btn-outline-primary px-4"   %>
                     </div>
                 </div>
             </div>
