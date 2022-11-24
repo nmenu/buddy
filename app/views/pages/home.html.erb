@@ -18,7 +18,7 @@
       <h2 align = center>
       <%= link_to "Discover the offers", offers_path, class: "btn btn-primary px-4" %>
 
-      <%= user_signed_in? ? (link_to "Create a new offer", offers_path, class: "btn btn-outline-primary px-4") : "" %>
+      <%= user_signed_in? ? (link_to "Create a new offer", new_offer_path, class: "btn btn-outline-primary px-4") : "" %>
 
       </h2>
   </div>
