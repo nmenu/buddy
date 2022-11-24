@@ -15,6 +15,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  margin-bottom: 15px;
 }
 
 .banner h1 {
@@ -32,3 +33,24 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
+#headerslogan {
+  color: $blue;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+.card-product {
+  margin: 15px;
+}
+
+.card-product-infos a:link {
+  text-decoration: none;
+  color: $blue;
+}
+
+.card-product-infos a:hover {
+  text-decoration: none;
+  color: rgb(0, 0, 112);
+}
