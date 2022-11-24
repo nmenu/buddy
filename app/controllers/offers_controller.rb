@@ -1,4 +1,5 @@
 class OffersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:show, :index]
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -22,6 +23,11 @@ class OffersController < ApplicationController
       flash[:alert] = @offer.errors.full_messages.join("\n")
       render :new, status: :unprocessable_entity # message d'erreur
     end
+  end
+
+  def destroy
+    @offer.destroy
+    redirect_to offers_path, status: :see_other
   end
 
   private

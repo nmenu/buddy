@@ -1,20 +1,17 @@
 <div class="container">
-    <h2>Find your buddy for today</h2>
-      <ul>
-        <% @offers.each do |offer| %>
-          <li>
-              <div class="card-product">
-                <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-                <div class="card-product-infos">
-                  <%= link_to offer.title, offer_path(offer) %>
-                  <br>
-                  <%= offer.description %>
-                </div>
-
-              </div>
-          </li>
-        <% end %>
-      </ul>
-      <%= link_to "New offer", new_offer_path, class: "btn btn-outline-primary px-4" %>
-
+  <h2>Find your buddy for today</h2>
+  <ul>
+    <% @offers.each do |offer| %>
+      <li>
+        <div class="card-product">
+          <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-product-infos">
+            <%= link_to offer.title, offer_path(offer) %>
+            <br>
+            <%= offer.description %>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
 </div>
