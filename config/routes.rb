@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :offers, only: [:index, :new, :create, :show]
 
+  resources :offers, only: :destroy
+
 end
