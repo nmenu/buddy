@@ -7,12 +7,18 @@
 <div class="container">
   <h3> Check from our massive data base, who is available to spend time with you !<br>
     Many people, many styles, many activities...</h3>
-  Scrabble, tenis, readings, massage, or whatever is is on offer, you can book it. Any available free date in the calendar will do.
-  You will be able to serach based on category and location and once you find your gem, book it for a few ours.
-  Prepay the prestatation to finalize the booking and get ready for the fun part.
-  <div style="padding: 50px;">
-    <h2 align = center>
-      <%= link_to "Discover the offers", offers_path, class: "btn btn-outline-primary px-4" %>
-    </h2>
+
+    Scrabble, tenis, readings, massage, or whatever is is on offer, you can book it. Any available free date in the calendar will do.
+    You will be able to serach based on category and location and once you find your gem, book it for a few ours.
+
+    Prepay the prestatation to finalize the booking and get ready for the fun part.
+
+    <div style="padding: 50px;">
+      <h2 align = center>
+      <%= link_to "Discover the offers", offers_path, class: "btn btn-primary px-4" %>
+
+      <%= user_signed_in? ? (link_to "Create a new offer", new_offer_path, class: "btn btn-outline-primary px-4") : "" %>
+
+      </h2>
   </div>
 </div>
