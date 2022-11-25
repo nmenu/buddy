@@ -21,6 +21,11 @@ class BookingsController < ApplicationController
     end
   end
 
+  def update
+    @booking.update(status_booking_params)
+    redirect_to booking_path(@booking)
+  end
+
   private
 
   def set_offer
@@ -29,5 +34,9 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)
+  end
+
+  def status_booking_params
+    params.require(:booking).permit(:status)
   end
 end
