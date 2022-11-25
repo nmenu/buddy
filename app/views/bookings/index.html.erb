@@ -15,7 +15,7 @@
       <tbody>
           <% @bookings.each do |booking| %>
             <tr>
-              <td> <%=link_to booking.offer.title, booking_path(booking)%> </td>
+              <td> <%=booking.offer.title%> </td>
               <td> <%=booking.status%> </td>
               <td> <%=booking.start_date%> </td>
               <td> <%=booking.end_date%> </td>
