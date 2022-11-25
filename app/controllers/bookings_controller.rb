@@ -5,8 +5,11 @@ class BookingsController < ApplicationController
     @bookings = Booking.all
   end
 
+  def price
+    @total_price = ((booking_params.end_date.to_time - booking_params.start_date.to_time) / 1.hour * 1.0)
+  end
+
   def show
-    @booking = Booking.new
   end
 
   def create
@@ -14,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.offer = @offer
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path(@bookings)
     else
       flash[:alert] = @booking.errors.full_messages.join("\n")
       render "offers/show"
