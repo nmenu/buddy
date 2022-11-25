@@ -3,7 +3,7 @@
     <div class="col-md-8">
       <div class="card p-3 py-4">
         <div class="text-center">
-          <img src="https://media.tenor.com/KuxgIrYVdDcAAAAC/gandalf-laughing.gif" width="300" class="rounded-circle">
+          <%= cl_image_tag(current_user.photo_blob.key, width: 100, height: 100,) %>
         </div>
         <div class="text-center mt-3">
           <span class="bg-secondary p-1 px-4 rounded text-white">space for a possible category?</span>
